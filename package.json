@@ -65,5 +65,8 @@
   "devDependencies": {
     "prettier": "^2.1.2",
     "sass": "^1.63.6"
-  }
+  },
+  "scripts": {
+  "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build"
+}
 }
