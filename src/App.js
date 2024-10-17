@@ -266,11 +266,11 @@ function App() {
         abortCustomChartLoad={abortCustomChartLoad}
       />
       <div className="app-sections">
-        <Section title={`1. Load your data`} loading={loading}>
+        <Section title={`1. Sube tus datos`} loading={loading}>
           <DataLoader {...dataLoader} hydrateFromProject={importProject} />
         </Section>
         {data && (
-          <Section title="2. Choose a chart">
+          <Section title="2. Elige un gráfico">
             <CustomChartLoader
               isOpen={isModalCustomChartOpen}
               onClose={toggleModalCustomChart}
@@ -288,7 +288,7 @@ function App() {
           </Section>
         )}
         {data && currentChart && (
-          <Section title={`3. Mapping`} loading={mappingLoading}>
+          <Section title={`3. Visualiza el gráfico`} loading={mappingLoading}>
             <DataMapping
               ref={dataMappingRef}
               dimensions={currentChart.dimensions}
@@ -299,7 +299,7 @@ function App() {
           </Section>
         )}
         {data && currentChart && (
-          <Section title="4. Customize">
+          <Section title="4. Personaliza el resultado">
             <ChartPreviewWithOptions
               chart={currentChart}
               dataset={data.dataset}
@@ -313,14 +313,14 @@ function App() {
           </Section>
         )}
         {data && currentChart && rawViz && (
-          <Section title="5. Export">
+          <Section title="5. Descárgalo">
             <Exporter rawViz={rawViz} exportProject={exportProject} />
           </Section>
         )}
         <Footer />
         <CookieConsent
           location="bottom"
-          buttonText="Got it!"
+          buttonText="Vamos!"
           style={{ background: '#f5f5f5', color: '#646467' }}
           buttonStyle={{
             background: '#646467',
